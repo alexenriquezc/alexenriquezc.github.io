@@ -1,0 +1,167 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;   
+    overflow: scroll;
+    overflow-y: auto;
+    overflow-x: hidden; 
+}
+
+.nav{
+    background: rgb(168, 2, 71);  
+    height: 4em;      
+}
+
+.navbar-title{   
+    position: relative; 
+    color: white;
+    margin: 0 0 0 8em;
+    top: 50%;
+    font-family: 'Arial'; 
+    transform: translateY(-50%);    
+}
+
+.monospace{
+    letter-spacing: 0.3em;
+}
+
+.jumbutron{    
+    height: content;
+    padding: 0.5em;
+    background: #f3f3f3;
+}
+
+.jumbutron .header{
+    padding-top: 0.5em;
+    font-size: 3em;
+    color: black;
+    word-wrap: normal;
+    z-index: 1;
+}
+
+.jumbutron p{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;  
+    padding-right: 10em;
+    padding-left: 10em;
+    word-wrap: break-word;      
+    display: block;     
+}
+
+.wrap-text{
+    text-align: justify;
+}
+
+.jumbutron p:after{
+    content: ".";
+}
+
+.text-mutted{
+    color: rgb(146, 146, 146);
+}
+
+.center{
+    text-align: center;
+}
+
+/* .content{
+    margin-top: 2em;    
+    padding: 10px;
+} */
+
+.card{            
+    height: fit-content;
+    border-radius: 5px;    
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);       
+}
+
+.card .card-title{    
+    font-size: 2em;
+    display: block;    
+    padding: 0.3em 0.5em;    
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card .card-content{
+    font-size: 1em;
+    text-align: justify;
+    padding: 0.3em 1em;    
+}
+
+.bg-crimson{
+    background: rgb(168, 2, 71);
+}
+
+.bg-black{
+    background: #111;
+}
+
+.card-title.bg-crimson, .card-title.bg-black{
+    color: #fff;
+}
+
+.card-title.bg-green{
+    color: teal;
+}
+
+
+.row{
+    
+    padding: 10px;
+}
+
+[class*="col-"] {
+    width: 100%;
+    padding: 0.5em 0;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 { width: 100%; }
+
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;                
+    }
+
+    .nav{
+        display: block;
+    }
+    .navbar-title{
+        margin: 0;
+        text-align: center;        
+    }
+    
+    .jumbutron p{        
+        padding-right: 3em;
+        padding-left: 3em;                     
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
