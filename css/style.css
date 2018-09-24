@@ -27,12 +27,11 @@ html, body{
 
 .jumbutron{    
     height: content;
-    padding: 0.5em;
+    padding: 15em;
     background: #f3f3f3;
 }
 
-.jumbutron .header{
-    padding-top: 0.5em;
+.jumbutron .header{    
     font-size: 3em;
     color: black;
     word-wrap: normal;
@@ -44,7 +43,8 @@ html, body{
     padding-bottom: 0.5em;  
     padding-right: 10em;
     padding-left: 10em;
-    word-wrap: break-word;      
+    word-wrap: break-word;   
+    font-size: 1.5em;   
     display: block;     
 }
 
@@ -95,6 +95,10 @@ html, body{
 
 .bg-black{
     background: #111;
+}
+
+.jumbutron.bg-crimson > .header, .jumbutron.bg-crimson>p{
+    color: #fff;
 }
 
 .card-title.bg-crimson, .card-title.bg-black{
