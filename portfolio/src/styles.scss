@@ -115,25 +115,26 @@ html, body{
     padding: 10px;
 } */
 
-.card{            
-    height: fit-content;
-    border-radius: 5px;    
-    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);       
-}
+// .card{            
+//     // height: fit-content;
+//     //border-radius: 10px !important;    
+//     // box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);       
+//     // background: linear-gradient(150deg, rgb(15, 93, 211), rgb(228, 3, 142));
+// }
 
-.card .card-title{    
-    font-size: 2em;
-    display: block;    
-    padding: 0.3em 0.5em;    
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
+// .card .card-title{    
+//     font-size: 2em;
+//     display: block;    
+//     padding: 0.3em 0.5em;    
+//     border-top-left-radius: 5px;
+//     border-top-right-radius: 5px;
+// }
 
-.card .card-content{
-    font-size: 1em;
-    text-align: justify;
-    padding: 0.3em 1em;    
-}
+// .card .card-content{
+//     font-size: 1em;
+//     text-align: justify;
+//     padding: 0.3em 1em;    
+// }
 
 .bg-crimson{
     background: rgb(168, 2, 71);
@@ -160,13 +161,8 @@ html, body{
     padding: 10px;
 }
 
-[class*="col-"] {
-    width: 100%;
-    padding: 0.5em 0;
-}
-
 .link-label{
-    text-decoration: none;    
+    text-decoration: none;        
 }
 
 .label{
@@ -176,28 +172,43 @@ html, body{
     color: #fff;
 }
 
+.label > .link-label{
+    text-decoration: none;
+    color: inherit;
+}
+
 .label:hover{
     color: #111;
 }
 
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 { width: 100%; }
+.label span {
+    display: block;    
+}
+
+section:nth-of-type(1){
+    
+    background: #f1f1f1;
+}
+
+section > .title {
+    font-size: 2em;
+    padding-top: 4em;
+}
+
+section > p {
+    font-size: 1.2em;
+    padding-top: 1em;
+}
+
+.wrapper{
+    padding: 8em;    
+}
 
 
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     [class*="col-"] {
-        width: 100%;                
+        width: 100%;        
     }
     
     .nav{
@@ -228,20 +239,8 @@ html, body{
         padding-top: 0.8em;   
         font-size: 1em; 
     }
-}
 
-@media only screen and (min-width: 768px) {
-    /* For desktop: */
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
+    .wrapper{
+        padding: 1em;    
+    }
 }
