@@ -6,23 +6,23 @@ html, body{
     overflow-y: auto;
     overflow-x: hidden; 
     font-family: 'Avenir', Helvetica, Arial ,sans-serif;
-    --webkit-font-smoothing: antialiased;
-    
+    --webkit-font-smoothing: antialiased;    
 }
 
 .nav{
     display: block;     
-    height: 4em;         
+    height: 4em;   
+    z-index: 1;    
 }
 
 .nav.navbar{
     list-style-type: none;    
     margin: 0;
     float: right;
-    display: block;
+    display: block;    
 }
 
-.nav.navbar li {
+.navbar li {
     display: inline;    
     top: 50%;
     position: relative;          
@@ -30,15 +30,18 @@ html, body{
     transition: border-bottom 700ms;    
 }
 
-.nav.navbar li a{    
+.navbar a{    
     text-decoration: none;
 }
 
-.nav.bg-crimson .nav.navbar > li:hover{
+.navbar li:hover{
     border-bottom : #fff solid 1px;
 }
 
-.nav.bg-crimson .nav.navbar > li a{
+.bg-crimson a, 
+.bg-black a, 
+.bg-navy a, 
+.bg-navy-gradient a{
     color: #fff;    
 }
 
@@ -47,12 +50,12 @@ html, body{
     margin: 0 0 0 2em;
     top: 50%;
     font-family: 'Arial'; 
-    font-size: 1.2em;
+    font-size: 1.3em;    
     float: left;
     transform: translateY(-50%);    
 }
 
-.nav.bg-crimson, .nav.bg-black .navbar-title{
+.bg-crimson, .bg-black, .navbar-title, .bg-navy{
     color: #fff;
 }
 
@@ -76,6 +79,7 @@ html, body{
     color: black;
     padding-top: 3em;
     word-wrap: normal;
+    font-weight: bold;
     z-index: 1;
 }
 
@@ -89,7 +93,7 @@ html, body{
     display: block;     
 }
 
-.jumbutron .link-label{
+.jumbutron .label{
     padding-top: 0.8em;   
     font-size: 1.2em; 
 }
@@ -110,45 +114,41 @@ html, body{
     text-align: center;
 }
 
-/* .content{
-    margin-top: 2em;    
-    padding: 10px;
-} */
-
-// .card{            
-//     // height: fit-content;
-//     //border-radius: 10px !important;    
-//     // box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2);       
-//     // background: linear-gradient(150deg, rgb(15, 93, 211), rgb(228, 3, 142));
-// }
-
-// .card .card-title{    
-//     font-size: 2em;
-//     display: block;    
-//     padding: 0.3em 0.5em;    
-//     border-top-left-radius: 5px;
-//     border-top-right-radius: 5px;
-// }
-
-// .card .card-content{
-//     font-size: 1em;
-//     text-align: justify;
-//     padding: 0.3em 1em;    
-// }
-
 .bg-crimson{
-    background: rgb(168, 2, 71);
+    background-color: rgb(168, 2, 71);
+}
+
+.bg-navy{
+    background-color: rgb(0, 91, 151);
+}
+
+.bg-navy-gradient{
+    background: linear-gradient(180deg, rgb(0,91,151), rgb(0, 61, 102));
 }
 
 .bg-black{
     background: #111;
 }
 
-.jumbutron.bg-crimson > .header, .jumbutron.bg-crimson>p{
+.jumbutron.bg-crimson .header, 
+.jumbutron.bg-crimson p, 
+.jumbutron.bg-black .header,
+.jumbutron.bg-black p,
+.jumbutron.bg-navy .header,
+.jumbutron.bg-navy p,
+.jumbutron.bg-navy-gradient .header,
+.jumbutron.bg-navy-gradient p {
     color: #fff;
 }
 
-.card-title.bg-crimson, .card-title.bg-black{
+.card{
+    border-radius: 15px;
+}
+
+.card-title.bg-crimson, 
+.card-title.bg-black
+.card-title.bg-navy
+.card-title.bg-navy-gradient{
     color: #fff;
 }
 
@@ -156,29 +156,25 @@ html, body{
     color: teal;
 }
 
-.row{
-    
+.row{    
     padding: 10px;
 }
 
-.link-label{
-    text-decoration: none;        
-}
 
 .label{
     padding: 0.5em;    
     display: inline-block;
     transition: color 700ms;
-    color: #fff;
+    //color: #fff;
 }
 
-.label > .link-label{
+.label a{
     text-decoration: none;
-    color: inherit;
+    transition: color .4s;
 }
 
-.label:hover{
-    color: #111;
+.label:hover a{
+    color: rgb(219, 219, 219);
 }
 
 .label span {
@@ -190,20 +186,109 @@ section:nth-of-type(1){
     background: #f1f1f1;
 }
 
-section > .title {
+section .title {
     font-size: 2em;
-    padding-top: 4em;
+    padding-top: 0.5em;
 }
 
-section > p {
+section p {
     font-size: 1.2em;
     padding-top: 1em;
 }
 
 .wrapper{
-    padding: 8em;    
+    padding: 7.5em;    
 }
 
+ul {
+    list-style-type: none;
+    padding: 0;    
+}
+
+img.pl{
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+}
+
+.m-t-md{
+    margin-top: 2em;
+}
+
+ul.text-center{
+    font-size: 1.3em;
+}
+
+// .flex {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+// .flex-50-gt-sm{
+//     display: block;
+//     flex: 1 1 50%;
+//     max-height: 100%;
+//     box-sizing: border-box;
+//     max-width: 50%;
+// }
+
+// .bars-wrap {
+//     margin: 0 0 0 0;
+// }
+
+// .waypoint{
+//     //opacity: 0;
+// }
+
+// .bar{    
+//     display: flex;
+//     flex-direction: row;    
+//     align-items: center;   
+//     margin: 5px 0;    
+// }
+
+.tag{
+    color: #fff;
+    background-color: rgb(1, 120, 199);
+    width: 110px;
+    text-align: center;
+}
+
+ 
+
+.chart{
+    display: block;    
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;    
+    justify-content: start;
+}
+
+.bar{
+    display: flex;        
+    flex-direction: row;   
+    margin-bottom: 10px; 
+    box-sizing: border-box;                  
+}
+
+.bar.flex span{
+    padding:0 15px 0 10px; 
+    line-height: 28px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.fill{
+    display: block;
+    background-color: rgb(0,91,151);
+    line-height: 28px;
+}
 
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
@@ -235,7 +320,7 @@ section > p {
         font-size: 0.8em;                  
     }
     
-    .jumbutron .link-label{
+    .jumbutron .label{
         padding-top: 0.8em;   
         font-size: 1em; 
     }
